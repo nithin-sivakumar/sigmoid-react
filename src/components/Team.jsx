@@ -33,18 +33,18 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="px-14 pr-10 py-10">
-      <div className="flex gap-[40px]">
-        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-7">
+    <section id="team" className="px-6 xl:px-14 xl:pr-10 xl:py-10">
+      <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-start gap-8 xl:gap-[40px]">
+        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 text-center xl:text-left">
           Team
         </span>
-        <span className="text-[18px] max-w-[28rem]">
+        <span className="text-[18px] max-w-[20rem] xl:max-w-[28rem] text-center xl:text-left">
           Meet the skilled and experienced team behind our successful digital
           marketing strategies
         </span>
       </div>
 
-      <div className="my-10 w-full flex items-center justify-center gap-4">
+      <div className="my-10 w-full flex flex-col xl:flex-row items-center justify-center gap-8 xl:gap-4">
         {teamMembers.map((member) => (
           <MemberCard key={member.id} member={member} />
         ))}
