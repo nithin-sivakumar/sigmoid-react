@@ -21,25 +21,29 @@ const CaseStudies = () => {
   ];
 
   return (
-    <section id="case-studies" className="px-14 pr-10 py-10">
-      <div className="flex gap-[40px]">
-        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-7">
+    <section
+      id="case-studies"
+      className="px-6 xl:px-14 xl:pr-10 pt-20 xl:py-10"
+    >
+      <div className="flex flex-col items-center xl:flex-row gap-5 xl:gap-[40px]">
+        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 w-fit text-center xl:text-left">
           Case Studies
         </span>
-        <span className="text-[18px] max-w-[36rem]">
+        <span className="text-[18px] text-center xl:text-left max-w-[36rem]">
           Explore Real-Life Examples of Our Proven Digital Marketing Success
           through Our Case Studies
         </span>
       </div>
 
       <div className="my-[5rem]">
-        <div className="bg-darkColor flex-1 px-[3.75rem] py-[4.375rem] rounded-[45px] flex text-white">
+        <div className="bg-darkColor flex-1 p-4 xl:px-[3.75rem] xl:py-[4.375rem] rounded-[45px] flex flex-col xl:flex-row text-white">
           {content.map((item) => (
             <div
               key={item.id}
-              className={`text-[18px] flex-1 px-[32px] ${
-                item.id !== 3 && "border-r-white border-r-2"
-              } flex flex-col items-start justify-between py-4`}
+              className={`text-[18px] flex-1 px-4 xl:px-[32px] ${
+                item.id !== 3 &&
+                "border-b-[1px] border-b-white xl:border-r-white xl:border-r-2 xl:border-b-0"
+              } flex flex-col items-start justify-between py-6 xl:py-4`}
             >
               <p>{item.content}</p>
               <p className="mt-10 text-primary flex items-center justify-center gap-2 cursor-pointer px-2 transition-all duration-100 group">
