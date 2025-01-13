@@ -48,12 +48,12 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="px-14 pr-10 py-10">
-      <div className="flex gap-[40px]">
-        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-7">
+    <section id="process" className="px-6 xl:px-14 xl:pr-10 pt-10 xl:py-10">
+      <div className="flex flex-col items-center xl:justify-start justify-center xl:flex-row gap-8 xl:gap-[40px]">
+        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 w-fit text-center xl:text-left">
           Our Working Process
         </span>
-        <span className="text-[18px] max-w-[20rem]">
+        <span className="text-[18px] max-w-[20rem] text-center xl:text-left">
           Step-by-Step Guide to Achieving Your Business Goals
         </span>
       </div>
