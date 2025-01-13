@@ -1,8 +1,17 @@
 import React from "react";
+import { motion } from "motion/react";
 
 const Footer = () => {
   return (
-    <footer className="px-6 xl:px-14 xl:pr-10 w-full min-h-[28rem] xl:h-[30rem]">
+    <motion.footer
+      initial={{ y: 20, opacity: 0.5 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: { delay: 0.2, duration: 1 },
+      }}
+      className="px-6 xl:px-14 xl:pr-10 w-full min-h-[28rem] xl:h-[30rem]"
+    >
       <div className="w-full h-full bg-darkColor rounded-[45px] py-10 xl:rounded-t-[45px] xl:rounded-b-none flex flex-col items-center justify-center gap-16 px-6 xl:px-24 text-white">
         <div className="flex flex-col xl:flex-row items-center justify-between w-full gap-4">
           <div className="flex-1 flex flex-col gap-4">
@@ -42,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

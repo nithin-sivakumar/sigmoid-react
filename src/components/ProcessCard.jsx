@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa6";
+import { motion } from "motion/react";
 
 const ProcessCard = ({ index, title, content }) => {
   const [isHidden, setIsHidden] = useState(true);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: { delay: 0.1, duration: 0.3 },
+      }}
       onClick={() => setIsHidden(!isHidden)}
       className={`w-full border-2 border-gray-300 hover:border-black rounded-[45px] flex-col items-center justify-center py-6 xl:py-[2.5rem] px-4 xl:px-[3.75rem] hover:scale-[101%] transition-all duration-200 hover:cursor-pointer shadow-black shadow-md ${
         !isHidden && "bg-primary"
@@ -32,7 +39,7 @@ const ProcessCard = ({ index, title, content }) => {
       >
         {content}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,18 +1,25 @@
 import React from "react";
+import { motion } from "motion/react";
 
 const Contact = () => {
   return (
     <section id="contact" className="px-6 xl:px-14 xl:pr-10 xl:py-10 pt-10">
-      <div className="flex flex-col items-center justify-center xl:items-start gap-8 xl:gap-[40px]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 1 } }}
+        className="flex flex-col items-center justify-center xl:items-start gap-8 xl:gap-[40px]"
+      >
         <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 text-center xl:text-left">
           Contact Us
         </span>
         <span className="text-[18px] max-w-[28rem] text-center xl:text-left">
           Connect with Us: Let's Discuss Your Digital Marketing Needs
         </span>
-      </div>
+      </motion.div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 1 } }}
         className="w-full flex items-center justify-around
        h-[44rem] my-10"
       >
@@ -97,7 +104,7 @@ const Contact = () => {
         <div className="xl:flex-[0.3] hidden xl:flex">
           <img src="/contact/bg.png" alt="" />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

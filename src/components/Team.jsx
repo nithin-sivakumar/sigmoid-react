@@ -1,10 +1,12 @@
 import React from "react";
 import MemberCard from "./MemberCard";
+import { motion } from "motion/react";
 
 const Team = () => {
   const teamMembers = [
     {
       id: 1,
+      delay: 1.0,
       name: "Nithin Sivakumar",
       designation: "CEO and Founder",
       img: "/team/1.png",
@@ -14,6 +16,7 @@ const Team = () => {
     },
     {
       id: 2,
+      delay: 1.2,
       name: "Shanmukha Moka",
       designation: "Director of Operations",
       img: "/team/2.png",
@@ -23,6 +26,7 @@ const Team = () => {
     },
     {
       id: 3,
+      delay: 1.4,
       name: "Poornachandra M",
       designation: "Senior SEO Specialist",
       img: "/team/3.png",
@@ -34,7 +38,11 @@ const Team = () => {
 
   return (
     <section id="team" className="px-6 xl:px-14 xl:pr-10 xl:py-10">
-      <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-start gap-8 xl:gap-[40px]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 1 } }}
+        className="flex flex-col xl:flex-row items-center justify-center xl:justify-start gap-8 xl:gap-[40px]"
+      >
         <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 text-center xl:text-left">
           Team
         </span>
@@ -42,7 +50,7 @@ const Team = () => {
           Meet the skilled and experienced team behind our successful digital
           marketing strategies
         </span>
-      </div>
+      </motion.div>
 
       <div className="my-10 w-full flex flex-col xl:flex-row items-center justify-center gap-8 xl:gap-4">
         {teamMembers.map((member) => (

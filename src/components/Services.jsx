@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import { motion } from "motion/react";
 
 const Services = () => {
   const cards = [
@@ -55,7 +56,11 @@ const Services = () => {
 
   return (
     <section id="services" className="px-6 xl:px-14 xl:pr-10 py-10">
-      <div className="flex flex-col xl:flex-row items-center justify-center xl:items-center xl:justify-start gap-5 xl:gap-[40px]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 1 } }}
+        className="flex flex-col xl:flex-row items-center justify-center xl:items-center xl:justify-start gap-5 xl:gap-[40px]"
+      >
         <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 w-fit">
           Services
         </span>
@@ -63,7 +68,7 @@ const Services = () => {
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
         </span>
-      </div>
+      </motion.div>
 
       <div className="flex flex-wrap gap-10 py-10">
         {cards.map((item) => (

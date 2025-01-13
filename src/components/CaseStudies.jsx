@@ -1,27 +1,33 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "motion/react";
 
 const CaseStudies = () => {
   const content = [
     {
       id: 1,
+      delay: 0.4,
       content:
         "For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.",
     },
     {
       id: 2,
+      delay: 0.8,
       content:
         "For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.",
     },
     {
       id: 3,
+      delay: 1.2,
       content:
         "For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.",
     },
   ];
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 1 } }}
       id="case-studies"
       className="px-6 xl:px-14 xl:pr-10 pt-20 xl:py-10"
     >
@@ -38,7 +44,12 @@ const CaseStudies = () => {
       <div className="my-[5rem]">
         <div className="bg-darkColor flex-1 p-4 xl:px-[3.75rem] xl:py-[4.375rem] rounded-[45px] flex flex-col xl:flex-row text-white">
           {content.map((item) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { delay: item.delay, duration: 0.4 },
+              }}
               key={item.id}
               className={`text-[18px] flex-1 px-4 xl:px-[32px] ${
                 item.id !== 3 &&
@@ -50,11 +61,11 @@ const CaseStudies = () => {
                 <span>Learn more</span>
                 <FaArrowRight className="-rotate-45 transition-all duration-100 group-hover:-translate-y-1 group-hover:translate-x-1" />
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

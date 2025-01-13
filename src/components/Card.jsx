@@ -1,9 +1,12 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "motion/react";
 
 const Card = ({ t1, t2, img, bg, text }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { delay: 0.4, duration: 1 } }}
       className={`flex-1 xl:min-w-[44vw] min-h-[36vh] xl:min-h-[20rem] ${bg} flex flex-col xl:flex-row items-start justify-between gap-[10px] border-2 border-black shadow-md shadow-black rounded-[45px] p-10 hover:scale-105 transition-all duration-200`}
     >
       <div className="flex-1 w-full xl:w-fit h-full flex flex-col items-start justify-between gap-4 xl:gap-0">
@@ -33,7 +36,7 @@ const Card = ({ t1, t2, img, bg, text }) => {
       <div className="hidden xl:flex">
         <img className="h-full" src={img} alt={t1} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

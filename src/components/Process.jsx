@@ -1,5 +1,6 @@
 import React from "react";
 import ProcessCard from "./ProcessCard";
+import { motion } from "motion/react";
 
 const Process = () => {
   const cards = [
@@ -49,14 +50,18 @@ const Process = () => {
 
   return (
     <section id="process" className="px-6 xl:px-14 xl:pr-10 pt-10 xl:py-10">
-      <div className="flex flex-col items-center xl:justify-start justify-center xl:flex-row gap-8 xl:gap-[40px]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 1 } }}
+        className="flex flex-col items-center xl:justify-start justify-center xl:flex-row gap-8 xl:gap-[40px]"
+      >
         <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 w-fit text-center xl:text-left">
           Our Working Process
         </span>
         <span className="text-[18px] max-w-[20rem] text-center xl:text-left">
           Step-by-Step Guide to Achieving Your Business Goals
         </span>
-      </div>
+      </motion.div>
 
       <div className="my-[5rem] flex flex-col items-center justify-center gap-[1.875rem]">
         {cards.map((item) => (
