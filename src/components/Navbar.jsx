@@ -13,6 +13,11 @@ const Navbar = () => {
     { id: 5, content: "Contact", href: "#contact" },
   ];
 
+  // Handle click on the link and close the navbar
+  const handleLinkClick = () => {
+    setIsOpenNav(false);
+  };
+
   return (
     <nav
       id="top"
@@ -30,19 +35,22 @@ const Navbar = () => {
       <div className="hidden xl:flex items-center justify-center gap-[40px]">
         <ul className="flex items-center justify-center gap-[40px]">
           {links.map((link) => (
-            <a
-              href={link.href}
-              key={link.id}
-              className="cursor-pointer hover:bg-primary hover:border-b-[1px] hover:border-black px-2 py-1 transition-all duration-200"
-            >
-              {link.content}
-            </a>
+            <li key={link.id}>
+              <a
+                href={link.href}
+                onClick={handleLinkClick}
+                className="cursor-pointer hover:bg-primary hover:border-b-[1px] hover:border-black px-2 py-1 transition-all duration-200"
+              >
+                {link.content}
+              </a>
+            </li>
           ))}
         </ul>
         <button className="hover:bg-primary transition-all duration-200 px-4 py-2 border-2 border-blackColor rounded-[14px]">
           Request a quote
         </button>
       </div>
+
       <div
         onClick={() => setIsOpenNav(true)}
         className="flex xl:hidden text-[40px] cursor-pointer"
@@ -63,6 +71,7 @@ const Navbar = () => {
               <a
                 href={link.href}
                 key={link.id}
+                onClick={handleLinkClick}
                 className="cursor-pointer hover:bg-primary hover:border-b-[1px] hover:border-black px-2 py-1 transition-all duration-200 text-[50px] gap-2"
               >
                 {link.content}

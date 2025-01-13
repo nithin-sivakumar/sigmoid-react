@@ -13,7 +13,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const App = () => {
   return (
-    <main className="customFont overflow-y-auto overflow-x-hidden h-screen w-full">
+    <main className="customFont overflow-y-scroll overflow-x-hidden h-screen w-full">
       <Navbar />
       <Hero />
       <Logos />

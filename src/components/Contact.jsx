@@ -94,7 +94,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex-[0.3] hidden xl:flex">
+        <div className="xl:flex-[0.3] hidden xl:flex">
           <img src="/contact/bg.png" alt="" />
         </div>
       </div>

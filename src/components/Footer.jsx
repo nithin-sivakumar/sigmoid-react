@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="px-14 pr-10 w-full h-[30rem]">
-      <div className="w-full h-full bg-darkColor rounded-t-[45px] flex flex-col items-center justify-center gap-16 px-24 text-white">
-        <div className="flex items-center justify-between w-full gap-4">
+    <footer className="px-6 xl:px-14 xl:pr-10 w-full min-h-[28rem] xl:h-[30rem]">
+      <div className="w-full h-full bg-darkColor rounded-[45px] py-10 xl:rounded-t-[45px] xl:rounded-b-none flex flex-col items-center justify-center gap-16 px-6 xl:px-24 text-white">
+        <div className="flex flex-col xl:flex-row items-center justify-between w-full gap-4">
           <div className="flex-1 flex flex-col gap-4">
             <div>
               <span className="bg-primary px-2 rounded-[7px] text-black text-[20px]">
@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex-1 h-32">
-            <div className="bg-[#383a4ab2] py-20 px-8 flex gap-4 items-center justify-between h-full rounded-[14px] shadow-md shadow-darkColor border-2 border-white">
+            <div className="bg-[#383a4ab2] py-20 px-4 hidden xl:flex gap-4 items-center justify-between h-full rounded-[14px] shadow-md shadow-darkColor border-2 border-white">
               <input
                 type="email"
                 name="email"
@@ -29,7 +29,7 @@ const Footer = () => {
                 placeholder="Email"
                 className="bg-transparent px-4 py-2 border-white border-2 rounded-[14px] flex-1"
               />
-              <button className="px-8 py-2 bg-primary hover:bg-transparent border-2 hover:border-primary hover:text-primary text-black rounded-[14px] transition-all duration-200">
+              <button className="px-2 py-2 bg-primary hover:bg-transparent border-2 hover:border-primary hover:text-primary text-black rounded-[14px] transition-all duration-200">
                 Subscribe to news
               </button>
             </div>
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
