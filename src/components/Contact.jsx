@@ -2,12 +2,12 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="px-14 pr-10 py-10">
-      <div className="flex gap-[40px]">
-        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-7">
+    <section id="contact" className="px-6 xl:px-14 xl:pr-10 xl:py-10 pt-10">
+      <div className="flex flex-col items-center justify-center xl:items-start gap-8 xl:gap-[40px]">
+        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 text-center xl:text-left">
           Contact Us
         </span>
-        <span className="text-[18px] max-w-[28rem]">
+        <span className="text-[18px] max-w-[28rem] text-center xl:text-left">
           Connect with Us: Let's Discuss Your Digital Marketing Needs
         </span>
       </div>
@@ -16,7 +16,7 @@ const Contact = () => {
         className="w-full flex items-center justify-around
        h-[44rem] my-10"
       >
-        <div className="flex-[0.7] pt-8 flex flex-col items-start justify-start gap-10 h-full pl-32 w-full">
+        <div className="flex-[0.7] pt-8 flex flex-col items-start justify-start gap-10 h-full xl:pl-32 w-full">
           <div className="flex items-center justify-center gap-5">
             <div className="flex items-center justify-center gap-2">
               <input
@@ -43,7 +43,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-[36rem] items-start justify-center gap-8">
+          <div className="flex flex-col w-full xl:w-[36rem] items-start justify-center gap-8">
             <div className="flex w-full flex-col items-start justify-center gap-2">
               <label htmlFor="name">
                 Name<sup>*</sup>
@@ -88,13 +88,13 @@ const Contact = () => {
               />
             </div>
 
-            <button className="w-full py-5 bg-darkColor text-white rounded-[14px] border-2 hover:bg-transparent hover:border-darkColor hover:text-darkColor transition-all duration-200">
+            <button className="w-[20rem] xl:w-full py-5 bg-darkColor text-white rounded-[14px] border-2 hover:bg-transparent hover:border-darkColor hover:text-darkColor transition-all duration-200">
               Send Message
             </button>
           </div>
         </div>
 
-        <div className="flex-[0.3]">
+        <div className="flex-[0.3] hidden xl:flex">
           <img src="/contact/bg.png" alt="" />
         </div>
       </div>
