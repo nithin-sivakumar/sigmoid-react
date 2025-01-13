@@ -54,12 +54,12 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="px-14 pr-10 py-10">
-      <div className="flex gap-[40px]">
-        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-7">
+    <section id="services" className="px-6 xl:px-14 xl:pr-10 py-10">
+      <div className="flex flex-col xl:flex-row items-center justify-center xl:items-center xl:justify-start gap-5 xl:gap-[40px]">
+        <span className="font-medium text-[40px] bg-primary rounded-[7px] px-2 xl:px-7 w-fit">
           Services
         </span>
-        <span className="text-[18px] max-w-[36rem]">
+        <span className="text-[18px] max-w-[36rem] text-center">
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
         </span>

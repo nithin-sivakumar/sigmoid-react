@@ -26,7 +26,7 @@ const App = () => {
       <Footer />
       <a
         href="#top"
-        className="size-16 border-4 border-darkColor border-dashed bg-primary absolute bottom-10 rounded-full right-10 text-darkColor flex items-center justify-center text-[32px] hover:bg-darkColor hover:border-primary hover:text-primary transition-all duration-200 animate-bounce"
+        className="hidden size-16 border-4 border-darkColor border-dashed bg-primary absolute bottom-10 rounded-full right-10 text-darkColor xl:flex items-center justify-center text-[32px] hover:bg-darkColor hover:border-primary hover:text-primary transition-all duration-200 animate-bounce"
       >
         <FaArrowRight className="-rotate-90" />
       </a>

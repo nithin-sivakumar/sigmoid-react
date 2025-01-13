@@ -11,7 +11,7 @@ const Logos = () => {
   ];
 
   return (
-    <section className="w-full px-6 xl:px-14 xl:pr-10 flex items-center justify-between my-[8rem] flex-wrap gap-6 xl:gap-0">
+    <section className="w-full px-16 xl:px-14 xl:pr-10 flex items-center justify-between my-[8rem] flex-wrap gap-6 xl:gap-0">
       {logoImages.map((item) => (
         <img
           className="w-24 xl:w-36 grayscale hover:grayscale-0 hover:scale-125 transition-all duration-200 cursor-pointer"
